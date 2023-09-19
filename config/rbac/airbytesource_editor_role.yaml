@@ -1,0 +1,31 @@
+# permissions for end users to edit airbytesources.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: airbytesource-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: airbyte-operator
+    app.kubernetes.io/part-of: airbyte-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: airbytesource-editor-role
+rules:
+- apiGroups:
+  - airbyte.airbyte.poc
+  resources:
+  - airbytesources
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - airbyte.airbyte.poc
+  resources:
+  - airbytesources/status
+  verbs:
+  - get

@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- airbyte_v1_airbytesource.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

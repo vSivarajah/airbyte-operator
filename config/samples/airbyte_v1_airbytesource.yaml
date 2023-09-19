@@ -1,0 +1,13 @@
+apiVersion: airbyte.airbyte.poc/v1
+kind: AirbyteSource
+metadata:
+  labels:
+    app.kubernetes.io/name: airbytesource
+    app.kubernetes.io/instance: airbytesource-sample
+    app.kubernetes.io/part-of: airbyte-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: airbyte-operator
+  name: airbytesource-sample
+spec:
+  sourceType: coinmarketcap
+  # TODO(user): Add fields here
